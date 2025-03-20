@@ -1,5 +1,7 @@
 package com.haven.estio.controllers;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,7 @@ public class UserController {
     
     @GetMapping("/user/first")
     @Operation(summary = "Get the first name of the current user")
-    public ResponseEntity<String> getUserFirstName() {
+    public ResponseEntity<Map<String, String>> getUserFirstName() {
         return ResponseEntity.ok(userService.getUserFirstName());
     }
 }

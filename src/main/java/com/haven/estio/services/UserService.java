@@ -1,5 +1,7 @@
 package com.haven.estio.services;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +12,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
     
-    public String getUserFirstName() {
-        return "Chima";
+    public Map<String, String> getUserFirstName() {
+        return Map.of("firstName", "John");
     }
 }
