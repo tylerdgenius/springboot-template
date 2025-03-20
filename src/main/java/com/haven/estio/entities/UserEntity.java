@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "users")
 public class UserEntity {
     @Id
     private UUID id = UUID.randomUUID();
@@ -22,5 +22,6 @@ public class UserEntity {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @Column(nullable = false)
     private String password;
 }
