@@ -10,4 +10,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
     
+    public String getUserFirstName() {
+        return "Chima";
+    }
 }
